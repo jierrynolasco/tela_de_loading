@@ -1,0 +1,77 @@
+body {
+    height: 100vh;
+    background-color: #ecadb3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    background-image: url(miranha.png);
+    height: 500px;
+    width: 350px;
+}
+
+
+h1{
+    font-family: "serif";
+    color: white;
+}
+
+main {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+.bola {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.a {
+    background-color: black;
+    animation-name: load-a;
+}
+
+.b {
+    background-color: blue;
+    animation-name: load-b;
+}
+
+@keyframes load-a {
+    0%{
+       left: 0;
+    }
+    50%{
+        transform: scale(1);
+        left: 120px;
+    }
+  
+    100%{
+        transform: scale(1);
+        left: 0px; 
+    }
+}
+
+@keyframes load-b {
+    0%{
+        right: 0;
+     }
+     50%{
+         transform: scale(1);
+         right: 120px;
+     }
+    
+     100%{
+         transform: scale(1);
+         right: 0px; 
+     }
+}
